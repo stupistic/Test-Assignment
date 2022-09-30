@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap CSS -->
+        <!-- build:css css/main.css -->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <!-- endbuild -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+        </style>
+
+        <title>Source from India!</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark fixed-top navbar-expand-sm">
+            <div class="container-fluid">
+                <a class = "navbar-brand mr-auto" href="#"><img src="img/logo.svg" height="60"></a>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light" href="#" id="sectorsList" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sectors
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="sectorsList">
+                        <li><a class="dropdown-item" href="#">Auto aftermarket</a></li>
+                        <li><a class="dropdown-item" href="#">Cutting Tools</a></li>
+                        <li><a class="dropdown-item" href="#">Electronics</a></li>
+                    </ul>
+                </li>
+                
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="Navbar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item active "><a class="nav-link" href="#"> Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"> Manufacturers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"> Customers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"> About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"> Blog & News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"> FAQ</a></li>
+                        <li class="nav-item">
+                            <button class="btn active">
+                                <i class="fa fa-user"></i> Login/Register
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <header class="bg d-flex justify-content-center align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-sm-3 col-sm-6">
+                        <form action="">
+                            <div class="form-group row">
+                                <div class="input-group">
+                                    <input type="text" class="searchBox form-control" name="term" placeholder="Search...">
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="searchBtn btn btn-default btn-submit">
+                                            <span class="fa fa-search"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-sm-3">
+
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </header>        
+
+        <div class="container">
+            <div class="row top-buffer">
+                <div class="container top-buffer">
+                    <div class="row">
+                        <div class="subHeader d-flex offset-sm-4 col-sm-4 offset-1 col-10 justify-content-center align-items-center">
+                            <span class="subHeaderContent">
+                                Our Expertise
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="row top-buffer">
+                        <div class="container">
+                            <div class="row top-buffer">
+                                <div class="offset-sm-1 col-sm-5">
+                                    <div class="card shadow valuesCard">
+                                        <div class="row card-body ourValues d-flex justify-content-center align-items-center">
+                                            <div class="col-sm-4 d-xs-none justify-content-center d-flex align-items-center">
+                                                <div class="rounded-circle ourValuesIcon">
+                                                    <svg width="82" height="78" viewBox="-10 -10 82 78" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <rect x="0.0859375" y="0.510498" width="70" height="65" fill="url(#pattern0)"/>
+                                                        <defs>
+                                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                        <use xlink:href="#image0_2_88" transform="translate(0.0263159) scale(0.0189474 0.02)"/>
+                                                        </pattern>
+                                                        <image id="image0_2_88" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAClklEQVRoge3ZP4wMYRjH8fuTO4ncxaHRUCmJmgsNiQYFjUJBFBLRXeESOrkGhdCJIIRCIpFTiOgkEiEkFChQKfzLCRIu3N1HsbMyNzezM7M7MzvF/rqdnd/zPN993mffd2f7+nrqqaeeihJO4DvuYSyjZxyv8QYby64xS0FTFutJGgy24mfIc6OqepMKOiVez7EqwTOOH5H731Vde7igJIhEmAQIWEgCLxsiupzgE15Frv1fZpYup6h21AGiqS14GQOzOwUCjlcJkbacJrAyKD6vblUF0aoTTT0M7l2FpzlByh946Z1oah5rAs8KPM4BUu7Ay9aJsA6HvGN4lMNbzsDL3omwpiMxluNBRm/xA98mBMxiNBJrGaYzeIsd+A4gmtoXE3MYd1J8xQ18ARBwLSH2MG638C1gdV0g4BuGEnIM4noLb2cDXyBEU9tb5BrE1QRf+wNfAgScT8k5gMsxvvYGviQI+ID+lNz9uBDx5R94+Te7vFqfoYZtmAt5ZuoGARtSaog72k/mgZisAOI9BnNCTOXoRV8fvpYM8QvjpUIEgV6UCDGLnaVDBMHKmo8/2NMib9xv9tNtQQQBN5cAMYf9lUEEQQfwsUCIeRyoFCIU/EpBEAs40hWIIMHegkAmugYRJBnR+IbpRIkHvEogQsnudwBxshYQQcJjbUKcrQ1EkHRdGxDnagURSh59xNlKlyQczbsKERSQdZefwUhCjOKOHR2A5Nnlb8b4u9uJUCEDGn8JJOlv5PXBkLf7nYjAJO3yz7AJX0LXfgfX6tGJCEjcLh/+k2aXxlGkqbe16kRTGA0+6SUQoXvOJHStHhBN4Sg+424UInh/SPyT9fpAZBXWWjwv3Z2JTqQx6BdxqNu19NRTAfoHz7VGdvCC9yEAAAAASUVORK5CYII="/>
+                                                        </defs>
+                                                    </svg>
+                                                        
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <h4 class="text-center">
+                                                    Exhaustive Global Catalogues
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="offset-sm-1 col-sm-5">
+
+                                    <div class="card shadow valuesCard">
+                                        <div class="row card-body ourValues d-flex justify-content-center align-items-center">
+                                            <div class="col-sm-4 d-xs-none justify-content-center d-flex align-items-center">
+                                                <div class="rounded-circle ourValuesIcon">
+                                                    <span><i class="fa-light fa-file-certificate"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <h4 class="text-center">
+                                                    Quality Certified Products
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row top-buffer">
+                                <div class="offset-sm-1 col-sm-5">
+                                    <div class="card shadow">
+                                        <div class="row card-body ourValues d-flex justify-content-center align-items-center">
+                                            <div class="col-sm-4 justify-content-center d-flex">
+                                                <div class="rounded-circle ourValuesIcon">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <h4>
+                                                    Doorstep Shipping Logistics
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="offset-sm-1 col-sm-5">
+                                    <div class="card shadow">
+                                        <div class="row card-body ourValues d-flex justify-content-center align-items-center">
+                                            <div class="col-sm-4 justify-content-center d-flex">
+                                                <div class="rounded-circle ourValuesIcon">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <h4>
+                                                    Real - time Visibility
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row top-buffer">
+                <div class="container">
+                    <h1>Testing content</h1>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="container">
+                <h1>Testing</h1>
+            </div>
+
+        </footer>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+        <!-- build:js js/main.js -->
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>
